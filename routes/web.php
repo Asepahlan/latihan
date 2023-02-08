@@ -10,6 +10,7 @@ Route::get('/', function () {
 });
 
 Route::post('user/auth', [UserController::class, 'auth']);
+Route::get('user/logout', [UserController::class, 'logout'])->name('logout');
 
 // member
 Route::controller(MemberController::class)->group(function (){

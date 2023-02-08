@@ -6,6 +6,7 @@
 </form>
 <h2>apakah kamu sehat? : {{'Auth'()->user()->name }}</h2>
 <a href="{{ url('member/add') }}"><button>Tambah data</button></a>
+<a href="{{ route('logout') }}"><button>Logout</button></a>
 <table border=1>
     <tr>
         <th>No</th>
