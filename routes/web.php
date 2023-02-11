@@ -8,7 +8,7 @@ use App\http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
-})->name('');
+})->name('login');
 
 Route::post('user/auth', [UserController::class, 'auth']);
 Route::post('user/logout', [UserController::class, 'logout']);

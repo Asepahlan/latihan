@@ -1,11 +1,13 @@
+@extends('container')
+@section('container')
 <h2> Halaman Member</h2>
 <form action="{{ Route('nama') }}" method="post">
     @csrf
     <input type="text" name="cari" id="">
     <input type="submit" value="CARI" name="bCari">
 </form>
-<h2>apakah kamu sehat? : {{'Auth'()->user()->name }}</h2>
-<h2>Level  : {{'Auth'()->user()->level }}</h2>
+{{-- <h2>apakah kamu sehat? : {{'Auth'()->user()->name }}</h2>
+<h2>Level  : {{'Auth'()->user()->level }}</h2> --}}
 <a href="{{ url('member/add') }}"><button>Tambah data</button></a>
 {{-- form logout --}}
 <form action="user/logout" method="post" id="form">
@@ -36,6 +38,7 @@
     </tr>
     @endforeach
 </table>
+@endsection
 
 {{ Session::get('pesan') }}
 <style>

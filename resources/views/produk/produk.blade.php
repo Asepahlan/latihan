@@ -1,3 +1,5 @@
+@extends('container')
+@section('container')
 <h2> Halaman produk</h2>
 <form action="{{ Route('kd_produk') }}" method="post">
     @csrf
@@ -32,6 +34,6 @@
     </tr>
     @endforeach
 </table>
-
+@endsection
 {{ Session::get('pesan') }}
 
