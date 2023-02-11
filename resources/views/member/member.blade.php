@@ -5,8 +5,14 @@
     <input type="submit" value="CARI" name="bCari">
 </form>
 <h2>apakah kamu sehat? : {{'Auth'()->user()->name }}</h2>
+<h2>Level  : {{'Auth'()->user()->level }}</h2>
 <a href="{{ url('member/add') }}"><button>Tambah data</button></a>
-<a href="{{ route('logout') }}"><button>Logout</button></a>
+{{-- form logout --}}
+<form action="user/logout" method="post" id="form">
+    @csrf
+    <button>LogOut</button>
+</form>
+{{--  --}}
 <table border=1>
     <tr>
         <th>No</th>
