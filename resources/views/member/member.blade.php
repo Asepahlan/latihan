@@ -38,4 +38,15 @@
 </table>
 
 {{ Session::get('pesan') }}
+<style>
+    #form{
+        margin-left: 50%
+    }
+    button{
+        width: 100px
+    }
+    img{
+        width: 400px
+    }
+</style>
 
